@@ -1,20 +1,67 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="mb-4">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="display-4 p-2 bg-warning">
+      <div class="container">
+       Bible App
+      </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    
+  <ion-row>
+    <ion-col size="12" size-sm="6">
+      <strong class="h2">Book of John</strong>
+      <br>
+      <p>Fourth Canonical Gospel</p>
+    </ion-col>
+    <ion-col size="12" size-sm="6">
+      <a (click)="goToJohn()">
+        <img class="rounded-3" src="assets/john_1.jpeg">
+      </a>
+    </ion-col>
+    <ion-col size="12">
+      <a (click)="goToJohn()">
+        <ion-card  color="dark" class="rounded-3 m-0">
+          <ion-card-header class="m-0">
+            <ion-card-title>Read</ion-card-title>
+            <ion-card-subtitle>View chapters and verses of the book</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </a>
+    </ion-col>
+    <ion-col size="12">
+      <center>
+      <br>
+      <strong class="h2">Search</strong>
+      <p class="m-0">Look for specific chapter or verse</p>
+      </center>
+    </ion-col>
+    <ion-col size="6">
+      <a (click)="goToChapters()">
+      <ion-card  color="dark"  class="rounded-3 m-0">
+        <ion-card-header>
+          <ion-card-title>Chapters</ion-card-title>
+          <ion-card-subtitle>Search through chapters</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      </a>
+    </ion-col>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-col size="6">
+      <a (click)="goToSearch()">
+        <ion-card  color="dark"  class="rounded-3 m-0">
+          <ion-card-header>
+            <ion-card-title>Verses</ion-card-title>
+            <ion-card-subtitle>Search through verses</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </a>
+    </ion-col>
+  </ion-row>
+
   </div>
+    
 </ion-content>
